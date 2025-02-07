@@ -11,29 +11,42 @@
      <meta charset="UTF-8">
      <title>Planet Data</title>
      <style>
-         table {
-             width: 100%;
-             border-collapse: collapse;
-         }
-         th, td {
-             border: 1px solid black;
-             padding: 8px;
-         }
-         th {
-             background-color: #f2f2f2;
-             text-align: center;
-         }
-         td {
-             text-align: right; /* Align numeric values to the right */
-         }
-         .planet-name {
-             border-left: 2px solid black;
-             border-right: 2px solid black;
-             text-align: left; /* Align planet names to the left */
-         }
-         tbody tr:hover {
-             background-color: #e0e0e0; /* Hover effect for better readability */
-         }
+        html {
+    font-family: sans-serif;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200,200,200);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+  }
+  
+  td, th {
+    border: 1px solid rgb(190,190,190);
+    padding: 10px 20px;
+  }
+  
+  th {
+    background-color: rgb(235,235,235);
+  }
+  
+  td {
+    text-align: center;
+  }
+  
+  tr:nth-child(even) td {
+    background-color: rgb(250,250,250);
+  }
+  
+  tr:nth-child(odd) td {
+    background-color: rgb(245,245,245);
+  }
+  
+  caption {
+    padding: 10px;
+  }
+        
      </style>
  </head>
  <body>
@@ -85,19 +98,18 @@
                  <td headers="moons-header">83</td>
              </tr>
              <tr>
-                 <th headers="planet-name-header" class="planet-name" scope="row">Uranus</th>
-                 <td headers="diameter-header">51,118</td>
-                 <td headers="mass-header">86.8</td>
-                 <td headers="moons-header">27</td>
-             </tr>
-             <tr>
-                 <th headers="planet-name-header" class="planet-name" scope="row">Neptune</th>
-                 <td headers="diameter-header">49,528</td>
-                 <td headers="mass-header">102</td>
-                 <td headers="moons-header">14</td>
-             </tr>
-         </tbody>
-     </table>
- </body>
- </html>
- 
+                <th headers="planet-name-header" class="planet-name" scope="row">Uranus</th>
+                <td headers="diameter-header">51,118</td>
+                <td headers="mass-header">86.8</td>
+                <td headers="moons-header">27</td>
+            </tr>
+            <tr>
+                <th headers="planet-name-header" class="planet-name" scope="row">Neptune</th>
+                <td headers="diameter-header">49,528</td>
+                <td headers="mass-header">102</td>
+                <td headers="moons-header">14</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
