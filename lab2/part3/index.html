@@ -1,0 +1,103 @@
+<!-- 
+ Carson Phillips 
+ File: Assignment/Lab2 part 3
+ 2025-02-07
+ this index file will be for the second assignment of the semester-->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <title>Planet Data</title>
+     <style>
+         table {
+             width: 100%;
+             border-collapse: collapse;
+         }
+         th, td {
+             border: 1px solid black;
+             padding: 8px;
+         }
+         th {
+             background-color: #f2f2f2;
+             text-align: center;
+         }
+         td {
+             text-align: right; /* Align numeric values to the right */
+         }
+         .planet-name {
+             border-left: 2px solid black;
+             border-right: 2px solid black;
+             text-align: left; /* Align planet names to the left */
+         }
+         tbody tr:hover {
+             background-color: #e0e0e0; /* Hover effect for better readability */
+         }
+     </style>
+ </head>
+ <body>
+     <table>
+         <caption><strong>Planet Data</strong></caption>
+         <thead>
+             <tr>
+                 <th id="planet-name-header" class="planet-name" scope="col">Planet Name</th>
+                 <th id="diameter-header" scope="col">Diameter (km)</th>
+                 <th id="mass-header" scope="col">Mass (10<sup>24</sup> kg)</th>
+                 <th id="moons-header" scope="col">Number of Moons</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr>
+                 <th headers="planet-name-header" class="planet-name" scope="row">Mercury</th>
+                 <td headers="diameter-header">4,879</td>
+                 <td headers="mass-header">0.33</td>
+                 <td headers="moons-header">0</td>
+             </tr>
+             <tr>
+                 <th headers="planet-name-header" class="planet-name" scope="row">Venus</th>
+                 <td headers="diameter-header">12,104</td>
+                 <td headers="mass-header">4.87</td>
+                 <td headers="moons-header">0</td>
+             </tr>
+             <tr>
+                 <th headers="planet-name-header" class="planet-name" scope="row">Earth</th>
+                 <td headers="diameter-header">12,756</td>
+                 <td headers="mass-header">5.97</td>
+                 <td headers="moons-header">1</td>
+             </tr>
+             <tr>
+                 <th headers="planet-name-header" class="planet-name" scope="row">Mars</th>
+                 <td headers="diameter-header">6,792</td>
+                 <td headers="mass-header">0.64</td>
+                 <td headers="moons-header">2</td>
+             </tr>
+             <tr>
+                 <th headers="planet-name-header" class="planet-name" scope="row">Jupiter</th>
+                 <td headers="diameter-header">142,984</td>
+                 <td headers="mass-header">1,898</td>
+                 <td headers="moons-header">79</td>
+             </tr>
+             <tr>
+                 <th headers="planet-name-header" class="planet-name" scope="row">Saturn</th>
+                 <td headers="diameter-header">120,536</td>
+                 <td headers="mass-header">568</td>
+                 <td headers="moons-header">83</td>
+             </tr>
+             <tr>
+                 <th headers="planet-name-header" class="planet-name" scope="row">Uranus</th>
+                 <td headers="diameter-header">51,118</td>
+                 <td headers="mass-header">86.8</td>
+                 <td headers="moons-header">27</td>
+             </tr>
+             <tr>
+                 <th headers="planet-name-header" class="planet-name" scope="row">Neptune</th>
+                 <td headers="diameter-header">49,528</td>
+                 <td headers="mass-header">102</td>
+                 <td headers="moons-header">14</td>
+             </tr>
+         </tbody>
+     </table>
+ </body>
+ </html>
+ 
