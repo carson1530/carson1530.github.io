@@ -5,23 +5,92 @@
     A simple project that will show a gallery of images.
 -->
 
-<h1>Image gallery example</h1>
+<h1>Image Gallery Example</h1>
 
 <div class="full-img">
-  <img
-    class="displayed-img"
-    src="eyeball.jpg"
-    alt="Closeup of a blue human eye" />
-    <img src="eyeball.jpg" alt="Closeup" width="300" height="300">
-
+  <img class="displayed-img" src="ancient.jpg" alt="Displayed Image" />
   <div class="overlay"></div>
   <button class="dark">Darken</button>
 </div>
 
-<div class="thumb-bar"></div>
+<div class="thumb-bar">
+  <img src="ancient.jpg" alt="photo 1" />
+  <img src="butterfly.jpg" alt="photo 2" />
+  <img src="eyeball.jpg" alt="photo 3" />
+  <img src="stone.jpg" alt="photo 4" />
+  <img src="flowers.jpg" alt="photo 5" />
+</div>
+
+<style>
+  .full-img {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .displayed-img {
+    width: 80%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .displayed-img.zoom {
+    transform: scale(1.5);
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+  }
+
+  .thumb-bar img {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    cursor: pointer;
+  }
+
+  .dark {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+</style>
+
 <script>
-btn.setAttribute("class", xxx);
-btn.textContent = xxx;
-overlay.style.backgroundColor = xxx;
+  const displayedImg = document.querySelector('.displayed-img');
+  const thumbBar = document.querySelector('.thumb-bar');
+  const overlay = document.querySelector('.overlay');
+  const darkBtn = document.querySelector('.dark');
+
+  
+  thumbBar.addEventListener('click', (e) => {
+    if (e.target.tagName === 'IMG') {
+      displayedImg.src = e.target.src;
+      displayedImg.alt = e.target.alt;
+    }
+  });
+
+  
+  displayedImg.addEventListener('click', () => {
+    displayedImg.classList.toggle('zoom');
+  });
+
+  
+  darkBtn.addEventListener('click', () => {
+    if (overlay.style.display === 'none' || !overlay.style.display) {
+      overlay.style.display = 'block';
+      darkBtn.textContent = 'Lighten';
+    } else {
+      overlay.style.display = 'none';
+      darkBtn.textContent = 'Darken';
+    }
+  });
 </script>
-```
+
+```*
